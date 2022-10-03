@@ -1,0 +1,322 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_Dataentry" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_TransactionItem" Type="InArgument(sd:DataRow)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>756,1993.6</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Sequence_Dataentry_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence_Dataentry" sap:VirtualizedContainerService.HintSize="766.4,1928.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base_FirstName" sap:VirtualizedContainerService.HintSize="724.8,228" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
+      <ui:AnchorBase.Action>
+        <ActivityAction x:TypeArguments="ui:Anchor">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+          </ActivityAction.Argument>
+          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into_FirstName" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="True" Text="[in_TransactionItem(&quot;First Name&quot;).ToString]">
+            <ui:TypeInto.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c3fc47a3-59a3-4cf9-b87a-dd353173b799" InformativeScreenshot="dab264c035dbcc58122b49b2ca2cfdd5" Selector="&lt;webctrl tag='INPUT' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:TypeInto.Target>
+          </ui:TypeInto>
+        </ActivityAction>
+      </ui:AnchorBase.Action>
+      <ui:AnchorBase.AnchorProvider>
+        <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element_FirstName" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+          <ui:WaitUiElementAppear.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d5218c65-2f37-4d55-a7f8-fad3c80cd0f6" InformativeScreenshot="f846769eda5526f5d579350f2f87566d" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;&lt;webctrl aaname='First Name' tag='LABEL' /&gt;">
+              <ui:Target.TimeoutMS>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:Target.TimeoutMS>
+              <ui:Target.WaitForReady>
+                <InArgument x:TypeArguments="ui:WaitForReady" />
+              </ui:Target.WaitForReady>
+            </ui:Target>
+          </ui:WaitUiElementAppear.Target>
+        </ui:WaitUiElementAppear>
+      </ui:AnchorBase.AnchorProvider>
+    </ui:AnchorBase>
+    <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base_LastName" sap:VirtualizedContainerService.HintSize="724.8,228" sap2010:WorkflowViewState.IdRef="AnchorBase_2">
+      <ui:AnchorBase.Action>
+        <ActivityAction x:TypeArguments="ui:Anchor">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+          </ActivityAction.Argument>
+          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into_LatName" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="True" Text="[in_TransactionItem(&quot;Last Name &quot;).ToString]">
+            <ui:TypeInto.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c3fc47a3-59a3-4cf9-b87a-dd353173b799" InformativeScreenshot="08efe101db27263bf6413663c576f16d" Selector="&lt;webctrl tag='INPUT' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:TypeInto.Target>
+          </ui:TypeInto>
+        </ActivityAction>
+      </ui:AnchorBase.Action>
+      <ui:AnchorBase.AnchorProvider>
+        <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element_LastName" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
+          <ui:WaitUiElementAppear.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d5218c65-2f37-4d55-a7f8-fad3c80cd0f6" InformativeScreenshot="52b482b0f2a9768dd36c2f8461e3b8a6" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;&lt;webctrl aaname='Last Name' tag='LABEL' /&gt;">
+              <ui:Target.TimeoutMS>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:Target.TimeoutMS>
+              <ui:Target.WaitForReady>
+                <InArgument x:TypeArguments="ui:WaitForReady" />
+              </ui:Target.WaitForReady>
+            </ui:Target>
+          </ui:WaitUiElementAppear.Target>
+        </ui:WaitUiElementAppear>
+      </ui:AnchorBase.AnchorProvider>
+    </ui:AnchorBase>
+    <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base_company" sap:VirtualizedContainerService.HintSize="724.8,228" sap2010:WorkflowViewState.IdRef="AnchorBase_3">
+      <ui:AnchorBase.Action>
+        <ActivityAction x:TypeArguments="ui:Anchor">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+          </ActivityAction.Argument>
+          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into_Company" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="True" Text="[in_TransactionItem(&quot;Company Name&quot;).ToString]">
+            <ui:TypeInto.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c3fc47a3-59a3-4cf9-b87a-dd353173b799" InformativeScreenshot="799795375cf3b1cbded361e157601e01" Selector="&lt;webctrl tag='INPUT' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:TypeInto.Target>
+          </ui:TypeInto>
+        </ActivityAction>
+      </ui:AnchorBase.Action>
+      <ui:AnchorBase.AnchorProvider>
+        <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element_company" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_3">
+          <ui:WaitUiElementAppear.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d5218c65-2f37-4d55-a7f8-fad3c80cd0f6" InformativeScreenshot="e0db42c87901132d30768a02b378b841" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;&lt;webctrl aaname='Company Name' tag='LABEL' /&gt;">
+              <ui:Target.TimeoutMS>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:Target.TimeoutMS>
+              <ui:Target.WaitForReady>
+                <InArgument x:TypeArguments="ui:WaitForReady" />
+              </ui:Target.WaitForReady>
+            </ui:Target>
+          </ui:WaitUiElementAppear.Target>
+        </ui:WaitUiElementAppear>
+      </ui:AnchorBase.AnchorProvider>
+    </ui:AnchorBase>
+    <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base_Role" sap:VirtualizedContainerService.HintSize="724.8,228" sap2010:WorkflowViewState.IdRef="AnchorBase_4">
+      <ui:AnchorBase.Action>
+        <ActivityAction x:TypeArguments="ui:Anchor">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+          </ActivityAction.Argument>
+          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into_Role" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="True" Text="[in_TransactionItem(&quot;Role in Company&quot;).ToString]">
+            <ui:TypeInto.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c3fc47a3-59a3-4cf9-b87a-dd353173b799" InformativeScreenshot="1400d9da81312960510aaaedd7e2f53c" Selector="&lt;webctrl tag='INPUT' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:TypeInto.Target>
+          </ui:TypeInto>
+        </ActivityAction>
+      </ui:AnchorBase.Action>
+      <ui:AnchorBase.AnchorProvider>
+        <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element_Role" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_4">
+          <ui:WaitUiElementAppear.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d5218c65-2f37-4d55-a7f8-fad3c80cd0f6" InformativeScreenshot="581b87eeabf144e13ced2697e64b2d86" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;&lt;webctrl aaname='Role in Company' tag='LABEL' /&gt;">
+              <ui:Target.TimeoutMS>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:Target.TimeoutMS>
+              <ui:Target.WaitForReady>
+                <InArgument x:TypeArguments="ui:WaitForReady" />
+              </ui:Target.WaitForReady>
+            </ui:Target>
+          </ui:WaitUiElementAppear.Target>
+        </ui:WaitUiElementAppear>
+      </ui:AnchorBase.AnchorProvider>
+    </ui:AnchorBase>
+    <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base_Address" sap:VirtualizedContainerService.HintSize="724.8,228" sap2010:WorkflowViewState.IdRef="AnchorBase_5">
+      <ui:AnchorBase.Action>
+        <ActivityAction x:TypeArguments="ui:Anchor">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+          </ActivityAction.Argument>
+          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into_Address" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_5" SendWindowMessages="True" Text="[in_TransactionItem(&quot;Address&quot;).ToString]">
+            <ui:TypeInto.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c3fc47a3-59a3-4cf9-b87a-dd353173b799" InformativeScreenshot="0ce5c6c978680b676b57c02dcfd27bb0" Selector="&lt;webctrl tag='INPUT' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:TypeInto.Target>
+          </ui:TypeInto>
+        </ActivityAction>
+      </ui:AnchorBase.Action>
+      <ui:AnchorBase.AnchorProvider>
+        <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element_Address" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_5">
+          <ui:WaitUiElementAppear.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d5218c65-2f37-4d55-a7f8-fad3c80cd0f6" InformativeScreenshot="e2495b674733d12a101b7cdcaa86cc21" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;&lt;webctrl aaname='Address' tag='LABEL' /&gt;">
+              <ui:Target.TimeoutMS>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:Target.TimeoutMS>
+              <ui:Target.WaitForReady>
+                <InArgument x:TypeArguments="ui:WaitForReady" />
+              </ui:Target.WaitForReady>
+            </ui:Target>
+          </ui:WaitUiElementAppear.Target>
+        </ui:WaitUiElementAppear>
+      </ui:AnchorBase.AnchorProvider>
+    </ui:AnchorBase>
+    <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base_Email" sap:VirtualizedContainerService.HintSize="724.8,228" sap2010:WorkflowViewState.IdRef="AnchorBase_6">
+      <ui:AnchorBase.Action>
+        <ActivityAction x:TypeArguments="ui:Anchor">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+          </ActivityAction.Argument>
+          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into_Email" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_6" SendWindowMessages="True" Text="[in_TransactionItem(&quot;Email&quot;).ToString]">
+            <ui:TypeInto.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c3fc47a3-59a3-4cf9-b87a-dd353173b799" InformativeScreenshot="ebe5bb4cef4beba9f5384ebadfc6d01b" Selector="&lt;webctrl tag='INPUT' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:TypeInto.Target>
+          </ui:TypeInto>
+        </ActivityAction>
+      </ui:AnchorBase.Action>
+      <ui:AnchorBase.AnchorProvider>
+        <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element_Email" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_6">
+          <ui:WaitUiElementAppear.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d5218c65-2f37-4d55-a7f8-fad3c80cd0f6" InformativeScreenshot="53168825c9de96ca784538ce6a184f13" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;&lt;webctrl aaname='Email' tag='LABEL' /&gt;">
+              <ui:Target.TimeoutMS>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:Target.TimeoutMS>
+              <ui:Target.WaitForReady>
+                <InArgument x:TypeArguments="ui:WaitForReady" />
+              </ui:Target.WaitForReady>
+            </ui:Target>
+          </ui:WaitUiElementAppear.Target>
+        </ui:WaitUiElementAppear>
+      </ui:AnchorBase.AnchorProvider>
+    </ui:AnchorBase>
+    <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base_PhoneNumber" sap:VirtualizedContainerService.HintSize="724.8,228" sap2010:WorkflowViewState.IdRef="AnchorBase_7">
+      <ui:AnchorBase.Action>
+        <ActivityAction x:TypeArguments="ui:Anchor">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+          </ActivityAction.Argument>
+          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into_PhoneNumber" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_7" SendWindowMessages="True" Text="[in_TransactionItem(&quot;Phone Number&quot;).ToString]">
+            <ui:TypeInto.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c3fc47a3-59a3-4cf9-b87a-dd353173b799" InformativeScreenshot="d40e29921b5d5e51f8f13e3eb141fc6d" Selector="&lt;webctrl tag='INPUT' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:TypeInto.Target>
+          </ui:TypeInto>
+        </ActivityAction>
+      </ui:AnchorBase.Action>
+      <ui:AnchorBase.AnchorProvider>
+        <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element_PhoneNumber" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_7">
+          <ui:WaitUiElementAppear.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d5218c65-2f37-4d55-a7f8-fad3c80cd0f6" InformativeScreenshot="be0406f60e70720a507dc76ad6fc37ef" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;&lt;webctrl aaname='Phone Number' tag='LABEL' /&gt;">
+              <ui:Target.TimeoutMS>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:Target.TimeoutMS>
+              <ui:Target.WaitForReady>
+                <InArgument x:TypeArguments="ui:WaitForReady" />
+              </ui:Target.WaitForReady>
+            </ui:Target>
+          </ui:WaitUiElementAppear.Target>
+        </ui:WaitUiElementAppear>
+      </ui:AnchorBase.AnchorProvider>
+    </ui:AnchorBase>
+  </Sequence>
+</Activity>

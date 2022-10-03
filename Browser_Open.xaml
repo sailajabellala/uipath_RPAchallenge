@@ -1,0 +1,252 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Browser_Open" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_filepath" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>744,2566.4</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Browser_Open_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Browser_Open" sap:VirtualizedContainerService.HintSize="591.2,2501.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="549.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Opening a browser&quot;]" />
+    <ui:RetryScope DisplayName="Retry Scope-openbrowser" sap:VirtualizedContainerService.HintSize="549.6,648" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="2" RetryInterval="00:00:10">
+      <ui:RetryScope.ActivityBody>
+        <ActivityAction>
+          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="508,380.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser_RPAchallenge" sap:VirtualizedContainerService.HintSize="466.4,288" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[in_Config(&quot;browserURL&quot;).ToString]">
+              <ui:OpenBrowser.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,185.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Launched browser successfully&quot;]" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:OpenBrowser.Body>
+            </ui:OpenBrowser>
+          </Sequence>
+        </ActivityAction>
+      </ui:RetryScope.ActivityBody>
+      <ui:RetryScope.Condition>
+        <ActivityFunc x:TypeArguments="x:Boolean">
+          <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists_RPAchallenge" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+            <ui:UiElementExists.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4cb48b17-00dc-473e-87b3-362a31ab5427" InformativeScreenshot="f6e493c26bc7ac5ed7312de9b5e3b7e3" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;&lt;webctrl tag='A' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:UiElementExists.Target>
+          </ui:UiElementExists>
+        </ActivityFunc>
+      </ui:RetryScope.Condition>
+    </ui:RetryScope>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="549.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Downloading input file&quot;]" />
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Rpa'" sap:VirtualizedContainerService.HintSize="549.6,347.2" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="37f045c85cf37f29cbc7ce97e88b0719" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;">
+      <ui:BrowserScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,200" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="click_Downloadexcel" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8a769974-94a9-44c6-aa37-30c6ffcd1012" InformativeScreenshot="82b34c4e66da7c091893439804d3940a" Selector="&lt;webctrl aaname=' Download Excel cloud_download' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+          </Sequence>
+        </ActivityAction>
+      </ui:BrowserScope.Body>
+    </ui:BrowserScope>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="549.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[in_Config(&quot;InputExcel&quot;).ToString]" />
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into_excelsheetpath" EmptyField="True" sap:VirtualizedContainerService.HintSize="549.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[in_Config(&quot;InputExcel&quot;).ToString]">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f4781063-65a1-47ae-8ce4-26ffb2b59771" InformativeScreenshot="bd0c950272003a3d2328ab4322bc810c" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:TypeInto.Target>
+    </ui:TypeInto>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click _save" sap:VirtualizedContainerService.HintSize="549.6,107.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="37b98dcb-3a68-4883-ad6a-81ad1200b61b" InformativeScreenshot="312d528f582365d0f39f00efec6e7e1e" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;&lt;wnd title='&amp;amp;Save' aaname='Save' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="549.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;Input file downloaded successfully&quot;]" />
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Rpa'" sap:VirtualizedContainerService.HintSize="549.6,347.2" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="bef36e411016d59ba841bf05a07c16db" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;">
+      <ui:BrowserScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,200" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b36318d3-1f21-4a16-95b6-59fa3544a7a2" InformativeScreenshot="be0efd0c21135afd399605197aa63cfd" Selector="&lt;webctrl tag='BUTTON' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+          </Sequence>
+        </ActivityAction>
+      </ui:BrowserScope.Body>
+    </ui:BrowserScope>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="549.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Entering the data&quot;]" />
+  </Sequence>
+</Activity>
